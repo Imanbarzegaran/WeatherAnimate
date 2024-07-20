@@ -13,6 +13,8 @@
 		D07DEA5C2C4926C3005E9AB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07DEA5B2C4926C3005E9AB8 /* Preview Assets.xcassets */; };
 		D07DEA6B2C49280C005E9AB8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DEA6A2C49280C005E9AB8 /* Extentions.swift */; };
 		D07DEA6D2C4966D3005E9AB8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DEA6C2C4966D3005E9AB8 /* HomeView.swift */; };
+		D07DEA6F2C49757E005E9AB8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DEA6E2C49757E005E9AB8 /* TabBar.swift */; };
+		D07DEA722C4BF618005E9AB8 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DEA712C4BF618005E9AB8 /* Shapes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		D07DEA5B2C4926C3005E9AB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D07DEA6A2C49280C005E9AB8 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		D07DEA6C2C4966D3005E9AB8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D07DEA6E2C49757E005E9AB8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		D07DEA712C4BF618005E9AB8 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D07DEA6A2C49280C005E9AB8 /* Extentions.swift */,
+				D07DEA712C4BF618005E9AB8 /* Shapes.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 		D07DEA682C4927A7005E9AB8 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				D07DEA6E2C49757E005E9AB8 /* TabBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -203,6 +209,8 @@
 				D07DEA6D2C4966D3005E9AB8 /* HomeView.swift in Sources */,
 				D07DEA552C4926C1005E9AB8 /* WeatherAnimateApp.swift in Sources */,
 				D07DEA6B2C49280C005E9AB8 /* Extentions.swift in Sources */,
+				D07DEA6F2C49757E005E9AB8 /* TabBar.swift in Sources */,
+				D07DEA722C4BF618005E9AB8 /* Shapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
