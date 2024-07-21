@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		D07DEA6D2C4966D3005E9AB8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DEA6C2C4966D3005E9AB8 /* HomeView.swift */; };
 		D07DEA6F2C49757E005E9AB8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DEA6E2C49757E005E9AB8 /* TabBar.swift */; };
 		D07DEA722C4BF618005E9AB8 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DEA712C4BF618005E9AB8 /* Shapes.swift */; };
+		D087AE322C4D75B400F1E706 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = D087AE312C4D75B400F1E706 /* BottomSheet */; };
+		D087AE342C4D76BC00F1E706 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087AE332C4D76BC00F1E706 /* ForecastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		D07DEA6C2C4966D3005E9AB8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D07DEA6E2C49757E005E9AB8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		D07DEA712C4BF618005E9AB8 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		D087AE332C4D76BC00F1E706 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D087AE322C4D75B400F1E706 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,7 @@
 		D07DEA672C49279D005E9AB8 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				D087AE332C4D76BC00F1E706 /* ForecastView.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -151,6 +156,9 @@
 			dependencies = (
 			);
 			name = WeatherAnimate;
+			packageProductDependencies = (
+				D087AE312C4D75B400F1E706 /* BottomSheet */,
+			);
 			productName = WeatherAnimate;
 			productReference = D07DEA512C4926C1005E9AB8 /* WeatherAnimate.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +187,9 @@
 				Base,
 			);
 			mainGroup = D07DEA482C4926C1005E9AB8;
+			packageReferences = (
+				D087AE302C4D75B400F1E706 /* XCLocalSwiftPackageReference "../../../../Downloads/BottomSheet-1.4.5/BottomSheet-1.4.5" */,
+			);
 			productRefGroup = D07DEA522C4926C1005E9AB8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +220,7 @@
 				D07DEA6D2C4966D3005E9AB8 /* HomeView.swift in Sources */,
 				D07DEA552C4926C1005E9AB8 /* WeatherAnimateApp.swift in Sources */,
 				D07DEA6B2C49280C005E9AB8 /* Extentions.swift in Sources */,
+				D087AE342C4D76BC00F1E706 /* ForecastView.swift in Sources */,
 				D07DEA6F2C49757E005E9AB8 /* TabBar.swift in Sources */,
 				D07DEA722C4BF618005E9AB8 /* Shapes.swift in Sources */,
 			);
@@ -416,6 +428,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D087AE302C4D75B400F1E706 /* XCLocalSwiftPackageReference "../../../../Downloads/BottomSheet-1.4.5/BottomSheet-1.4.5" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../../Downloads/BottomSheet-1.4.5/BottomSheet-1.4.5";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D087AE312C4D75B400F1E706 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D07DEA492C4926C1005E9AB8 /* Project object */;
 }
