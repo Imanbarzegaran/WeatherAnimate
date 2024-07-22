@@ -63,13 +63,8 @@ struct HomeView: View {
       //              Text(bottomSheetPosition.rawValue.formatted())
                 } content: {
                     ForecastView()               }
+                
 
-                          
-                       
-            
-                
-                
-                
                 // MARK: Tab Bar
                 TabBar(action: {
                     bottomSheetPosition = .top
