@@ -21,6 +21,8 @@ struct HomeView: View {
     
  @State var bottomSheetPosition: BottomSheetPosition = .middle
  @State var bottomSheetTranslation: CGFloat = BottomSheetPosition.middle.rawValue
+    @State var hasDragged: Bool = false
+    
     
     var bottonSheetTranslationProrated: CGFloat {
         (bottomSheetTranslation - BottomSheetPosition.middle.rawValue) / (BottomSheetPosition.top.rawValue - BottomSheetPosition.middle.rawValue)
@@ -50,7 +52,7 @@ struct HomeView: View {
                         .padding(.top, 257)
                         .offset(y: -bottonSheetTranslationProrated * imageOffset)
                     
-                    // MARK: Info from location and weather condition text
+                    // MARK: Current Weather
                     
                     VStack(spacing: -10 * (1 - bottonSheetTranslationProrated)) {
                         Text("Montreal")
@@ -60,6 +62,7 @@ struct HomeView: View {
                             Text(attributedString)
                             Text("H:24°    L:18°")
                                 .font(.title3.weight(.semibold))
+                                .opacity(1 - bottonSheetTranslationProrated)
                         }
                         Spacer()
                     }
@@ -80,6 +83,15 @@ struct HomeView: View {
                 
                     .onBottomSheetDrag { translation in
                         bottomSheetTranslation = translation / screenHeight
+                        
+                        withAnimation(.easeInOut) {
+                            if bottomSheetPosition == BottomSheetPosition.top {
+                                hasDragged = true
+                            } else {
+                                hasDragged = false
+                            }
+
+                        }
                     }
 
                     // MARK: Tab Bar
@@ -94,14 +106,15 @@ struct HomeView: View {
     }
     
     private var attributedString: AttributedString {
-        var string = AttributedString("19°" + "\n " + "Mostly Clear")
+        var string = AttributedString("19°" + (hasDragged ? " | " : "\n ") + "Mostly Clear")
+        
         if let temp = string.range(of: "19°") {
-            string[temp].font = .system(size: 96, weight: .thin)
-            string[temp].foregroundColor = .primary
+            string[temp].font = .system(size: (96 - (bottonSheetTranslationProrated * (96 - 20))), weight: hasDragged ? .semibold : .thin)
+            string[temp].foregroundColor = hasDragged ? .secondary : .primary
         }
         if let pipe = string.range(of: " | ") {
             string[pipe].font = .title3.weight(.semibold)
-            string[pipe].foregroundColor = .secondary
+            string[pipe].foregroundColor = .secondary.opacity(bottonSheetTranslationProrated)
         }
         
         if let weather = string.range(of: "Mostly Clear") {
