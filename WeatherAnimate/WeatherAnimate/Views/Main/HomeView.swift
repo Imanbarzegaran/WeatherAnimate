@@ -52,7 +52,7 @@ struct HomeView: View {
                     
                     // MARK: Info from location and weather condition text
                     
-                    VStack(spacing: -10) {
+                    VStack(spacing: -10 * (1 - bottonSheetTranslationProrated)) {
                         Text("Montreal")
                             .font(.largeTitle)
                         
@@ -64,6 +64,7 @@ struct HomeView: View {
                         Spacer()
                     }
                     .padding(.top, 51)
+                    .offset(y: -bottonSheetTranslationProrated * 46)
                     
                    
                     
@@ -84,8 +85,8 @@ struct HomeView: View {
                     // MARK: Tab Bar
                     TabBar(action: {
                         bottomSheetPosition = .top
-                        
                     })
+                    .offset(y: bottonSheetTranslationProrated * 115)
                 }
             }
             .navigationBarHidden(true)
