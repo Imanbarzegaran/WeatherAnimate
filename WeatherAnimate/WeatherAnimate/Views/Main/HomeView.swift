@@ -20,56 +20,73 @@ enum BottomSheetPosition: CGFloat, CaseIterable {
 struct HomeView: View {
     
  @State var bottomSheetPosition: BottomSheetPosition = .middle
-   
+ @State var bottomSheetTranslation: CGFloat = BottomSheetPosition.middle.rawValue
+    
+    var bottonSheetTranslationProrated: CGFloat {
+        (bottomSheetTranslation - BottomSheetPosition.middle.rawValue) / (BottomSheetPosition.top.rawValue - BottomSheetPosition.middle.rawValue)
+    }
     
     var body: some View {
         NavigationView {
           
-            ZStack {
-                
-                // MARK: Background Color
-                Color.background
-                    .ignoresSafeArea()
-                
-                // MARK: Background Image
-                Image("Background")
-                    .resizable()
-                    .ignoresSafeArea()
-                
-                // MARK: House Image
-                Image("House")
-                    .frame(maxHeight: .infinity, alignment: .top)
-                    .padding(.top, 257)
-                
-                // MARK: Info from location and weather condition text
-
-                VStack(spacing: -10) {
-                    Text("Montreal")
-                        .font(.largeTitle)
+            GeometryReader { geometry in
+                let screenHeight = geometry.size.height + geometry.safeAreaInsets.top + geometry.safeAreaInsets.bottom
+                let imageOffset = screenHeight + 36
+                ZStack {
                     
-                    VStack {
-                        Text(attributedString)
-                        Text("H:24°    L:18°")
-                            .font(.title3.weight(.semibold))
+                    // MARK: Background Color
+                    Color.background
+                        .ignoresSafeArea()
+                    
+                    // MARK: Background Image
+                    Image("Background")
+                        .resizable()
+                        .ignoresSafeArea()
+                        .offset(y: -bottonSheetTranslationProrated * imageOffset)
+                    
+                    // MARK: House Image
+                    Image("House")
+                        .frame(maxHeight: .infinity, alignment: .top)
+                        .padding(.top, 257)
+                        .offset(y: -bottonSheetTranslationProrated * imageOffset)
+                    
+                    // MARK: Info from location and weather condition text
+                    
+                    VStack(spacing: -10) {
+                        Text("Montreal")
+                            .font(.largeTitle)
+                        
+                        VStack {
+                            Text(attributedString)
+                            Text("H:24°    L:18°")
+                                .font(.title3.weight(.semibold))
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                .padding(.top, 51)
-                
-                // MARK: Bottom Sheet
-        
-            
-                BottomSheetView(position: $bottomSheetPosition) {
-      //              Text(bottomSheetPosition.rawValue.formatted())
-                } content: {
-                    ForecastView()               }
-                
-
-                // MARK: Tab Bar
-                TabBar(action: {
-                    bottomSheetPosition = .top
+                    .padding(.top, 51)
                     
-                })
+                   
+                    
+                    // MARK: Bottom Sheet
+                    
+                    
+                    BottomSheetView(position: $bottomSheetPosition) {
+                            Text(bottonSheetTranslationProrated.formatted())
+                        
+                    } content: {
+                        ForecastView()          
+                    }
+                
+                    .onBottomSheetDrag { translation in
+                        bottomSheetTranslation = translation / screenHeight
+                    }
+
+                    // MARK: Tab Bar
+                    TabBar(action: {
+                        bottomSheetPosition = .top
+                        
+                    })
+                }
             }
             .navigationBarHidden(true)
         }
