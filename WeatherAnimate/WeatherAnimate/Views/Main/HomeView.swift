@@ -75,10 +75,10 @@ struct HomeView: View {
                     
                     
                     BottomSheetView(position: $bottomSheetPosition) {
-                            Text(bottonSheetTranslationProrated.formatted())
+                      //      Text(bottonSheetTranslationProrated.formatted())
                         
                     } content: {
-                        ForecastView()          
+                        ForecastView(bottomSheetTranslationProrated: bottonSheetTranslationProrated)          
                     }
                 
                     .onBottomSheetDrag { translation in
@@ -90,7 +90,6 @@ struct HomeView: View {
                             } else {
                                 hasDragged = false
                             }
-
                         }
                     }
 
@@ -128,4 +127,5 @@ struct HomeView: View {
 #Preview {
     HomeView()
         .preferredColorScheme(.dark)
+    
 }

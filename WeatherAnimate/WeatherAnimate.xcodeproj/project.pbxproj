@@ -17,6 +17,7 @@
 		D07DEA722C4BF618005E9AB8 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07DEA712C4BF618005E9AB8 /* Shapes.swift */; };
 		D087AE322C4D75B400F1E706 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = D087AE312C4D75B400F1E706 /* BottomSheet */; };
 		D087AE342C4D76BC00F1E706 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087AE332C4D76BC00F1E706 /* ForecastView.swift */; };
+		D08805A02C513C6500DE78A0 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088059F2C513C6500DE78A0 /* SegmentedControl.swift */; };
 		D08B0E012C4EACB200A9696B /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B0E002C4EACB200A9696B /* Blur.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		D07DEA6E2C49757E005E9AB8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		D07DEA712C4BF618005E9AB8 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		D087AE332C4D76BC00F1E706 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
+		D088059F2C513C6500DE78A0 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		D08B0E002C4EACB200A9696B /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				D08B0E002C4EACB200A9696B /* Blur.swift */,
+				D088059F2C513C6500DE78A0 /* SegmentedControl.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07DEA572C4926C1005E9AB8 /* ContentView.swift in Sources */,
+				D08805A02C513C6500DE78A0 /* SegmentedControl.swift in Sources */,
 				D07DEA6D2C4966D3005E9AB8 /* HomeView.swift in Sources */,
 				D08B0E012C4EACB200A9696B /* Blur.swift in Sources */,
 				D07DEA552C4926C1005E9AB8 /* WeatherAnimateApp.swift in Sources */,
