@@ -18,6 +18,7 @@
 		D087AE322C4D75B400F1E706 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = D087AE312C4D75B400F1E706 /* BottomSheet */; };
 		D087AE342C4D76BC00F1E706 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087AE332C4D76BC00F1E706 /* ForecastView.swift */; };
 		D08805A02C513C6500DE78A0 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088059F2C513C6500DE78A0 /* SegmentedControl.swift */; };
+		D08805A22C5149C700DE78A0 /* Forecast Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08805A12C5149C700DE78A0 /* Forecast Model.swift */; };
 		D08B0E012C4EACB200A9696B /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B0E002C4EACB200A9696B /* Blur.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		D07DEA712C4BF618005E9AB8 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		D087AE332C4D76BC00F1E706 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		D088059F2C513C6500DE78A0 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		D08805A12C5149C700DE78A0 /* Forecast Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Forecast Model.swift"; sourceTree = "<group>"; };
 		D08B0E002C4EACB200A9696B /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		D07DEA632C492753005E9AB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D08805A12C5149C700DE78A0 /* Forecast Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				D07DEA6D2C4966D3005E9AB8 /* HomeView.swift in Sources */,
 				D08B0E012C4EACB200A9696B /* Blur.swift in Sources */,
 				D07DEA552C4926C1005E9AB8 /* WeatherAnimateApp.swift in Sources */,
+				D08805A22C5149C700DE78A0 /* Forecast Model.swift in Sources */,
 				D07DEA6B2C49280C005E9AB8 /* Extentions.swift in Sources */,
 				D087AE342C4D76BC00F1E706 /* ForecastView.swift in Sources */,
 				D07DEA6F2C49757E005E9AB8 /* TabBar.swift in Sources */,

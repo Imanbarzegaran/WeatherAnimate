@@ -17,7 +17,9 @@ struct SegmentedControl: View {
             HStack {
                 Button(
                     action: {
-                        selection = 0
+                        withAnimation(.easeInOut(duration: 0.4)) {
+                            selection = 0
+                        }
                     },
                     label: {
                         Text("Hourly Forecast")
@@ -26,7 +28,9 @@ struct SegmentedControl: View {
                 
                 Button(
                     action: {
-                        selection = 1
+                        withAnimation(.easeInOut(duration: 0.4)) {
+                            selection = 1
+                        }
                     },
                     label: {
                         Text("Weekly Forecast")
