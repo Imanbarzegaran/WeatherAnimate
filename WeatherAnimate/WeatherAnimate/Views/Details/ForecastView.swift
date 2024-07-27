@@ -16,6 +16,12 @@ struct ForecastView: View {
             VStack(spacing: 20) {
                 // MARK: Segmented Control
                 SegmentedControl(selection: $selection)
+                
+                // MARK: Forecast Cards
+                ScrollView(.horizontal, showsIndicators: false) {
+                     
+                }
+                .padding(.horizontal, 20)
             }
         }
         .backgroundBlur(radius: 25, opaque: true)
