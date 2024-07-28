@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WeatherView: View {
+    
+    @State private var searchText = ""
     var body: some View {
         ZStack {
             // MARK: Background
@@ -31,14 +33,17 @@ struct WeatherView: View {
         }
         .overlay {
             // MARK: Navigation Bar
-            NavigationBar()
+            NavigationBar(searchText: $searchText)
         }
         .navigationBarHidden(true)
+    //    .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search for a city or airport")
     }
 }
 
 #Preview {
-    WeatherView()
-        .preferredColorScheme(.dark)
+    NavigationView {
+        WeatherView()
+            .preferredColorScheme(.dark)
+    }
     
 }
